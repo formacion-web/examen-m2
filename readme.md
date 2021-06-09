@@ -15,7 +15,7 @@
 
 ### Descripción del ejercicio
 
-La prueba consiste en crear una web que muestre las películas de la saga star-wars. Deberás construir una galería de imágenes de carteles de películas con su título. Al hacer click en una imagen y/o título de la película se debe mostrar en un recuadro la sinopsis de la película.
+La prueba consiste en crear una web que muestre las películas de la saga star-wars. Deberás construir una lista de películas con su título. Al hacer click en el título de una película se debe mostrar en un recuadro la sinopsis de la película.
 
 
 ![examen M2](examen-m2.gif)
@@ -103,6 +103,7 @@ El examen está estructurado en iteraciones que irán sumando puntos:
 1. Construir la clase **Starwars**.
 2. Cargar el listado de películas en la __sección principal__.
 3. Cargar el detalle de una película en la __sección detalle__. 
+4. Bonus track: Crear el mismo esquema para personajes.
 
 ### Iteración 1: Construir la clase Starwars: (3 puntos)
 
