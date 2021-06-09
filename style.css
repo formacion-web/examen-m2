@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body{
+    font-family: "lato", sans-serif;
+    
+}
+header {
+  position: relative;
+  height: 100vh;
+  background: url(./assets/cielo_oscuro.jpg);
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+
+ 
+}
+
+h1,#film-title {
+ 
+  text-align: center;
+  /* font-family: "lato", sans-serif; */
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+
+  margin-top: -60px;
+  padding-left: 10px;
+
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.scroll-down-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #4d4d4d;
+  cursor: pointer;
+  height: 32px;
+  font-size: 18px;
+  text-align: center;
+}
+.fa.fa-angle-down {
+  color:#fff;
+  -webkit-animation: pulse 1.5s infinite;
+  animation: pulse 1.5s infinite;
+  font-size: 28px;
+  position: absolute;
+  
+}
+
+#principal, #detalle {
+  height: 100vh;
+  background: #0C0C0C;
+}
+
+nav{
+  padding:1rem 0;
+  border-bottom:solid white 1px;
+}
+
+
+nav ul{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+
+a{
+cursor:pointer;
+}
+#principal a , #principal a:visited, #detalle a, #detalle a:visited{
+    
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+a:hover{
+    opacity: 0.2;
+}
+
+.lista{
+  text-align: center;
+  transform: translateY(50%);
+margin:auto;
+width: 600px;
+}
+
+.lista>li{
+  margin: 20px;
+  padding: 20px;
+  background-color: whitesmoke;
+  color: #4d4d4d;
+}
+
+#detalle{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#film-title{
+  margin-top:1rem;
+}
+
+
+#film-description{
+  width:600px;
+  height: 600px;
+  padding: 2rem;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  font-size: 1.3rem;
+  text-align: justify;
+  line-height: 2.2rem;
+  letter-spacing: 2px;
+  background-color: whitesmoke;
+
+}
+
+#film-description::first-letter{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%,
+  to {
+    -ms-filter: "alpha(opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    top: 0;
+  }
+  50% {
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+    top: -16px;
+  }
+}
