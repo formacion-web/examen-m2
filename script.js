@@ -60,6 +60,7 @@ const moviesById = (e)=>{
     title.innerHTML = content.properties.title;
     description.innerHTML = content.properties.opening_crawl;
 }
+.
 
 
 const loadFilmTitles =  ()=>{
