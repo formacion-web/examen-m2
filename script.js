@@ -145,7 +145,7 @@ const init = () => {
 
 }
 
-// Aún no va.....!!!
+
 const removeItems_list = () => {
     items = document.getElementsByClassName('item_list');
     Array.from(items).forEach(element => {element.remove()});
