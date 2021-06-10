@@ -79,8 +79,8 @@ const loadFilmTitles = async () => {
   let datos = await fetchFilms(urlFilms);
 
   let lista = document.querySelector("lista");
-
-  datos.forEach((e) => {
+  let arrayDatos = datos.result;
+  arrayDatos.forEach((e) => {
     let title = e.title;
 
     const li = document.createElement("li");
