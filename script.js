@@ -34,6 +34,10 @@ const fetchFilms = async (urlFilms) => {
 // };
 
 // class Starwars {
+    // constructor(id, title,){
+    //     this.id = id;
+    //     this.title = title;
+    // }
 
 //   getFilms() {
 //     let urlFilms = "https://www.swapi.tech/api/films";
@@ -71,8 +75,8 @@ const fetchFilms = async (urlFilms) => {
 
 // const starwars = new Starwars();
 
-const loadFilmTitles =  () => {
-  let datos =  fetchFilms(urlFilms);
+const loadFilmTitles = async () => {
+  let datos = await fetchFilms(urlFilms);
 
   let lista = document.querySelector("lista");
 
