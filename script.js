@@ -25,6 +25,8 @@ class Starwars {
 
     async getFilms(element) {
         try {
+            removeItems_list();
+
             this.listapeliculas = [];
             let url = "./data.json";
 
@@ -34,9 +36,9 @@ class Starwars {
                 const id_pelicula = element.uid;
                 const title = element.properties.title;
                 const opening_crawl = element.properties.opening_crawl;
-                const txtHTML = `<li><a id='${id_pelicula}'>${title}</a></li>`;
+                const txtHTML = `<li class="item_list"><a id='${id_pelicula}'>${title}</a></li>`;
                 lista.insertAdjacentHTML("beforeend", txtHTML);
-                document.getElementById(`${id_pelicula}`).classList.add("item_list");
+
                 document.getElementById(`${id_pelicula}`).addEventListener('click', filmDescription);
 
                 this.listapeliculas.push(new Pelicula(id_pelicula, title, opening_crawl));
@@ -65,7 +67,7 @@ class Starwars {
                 const id_personaje = element.uid;
                 const name = element.name;
                 const url = element.url;
-                const txtHTML = `<li><a id='${id_personaje}'>${name}</a></li>`;
+                const txtHTML = `<li class="item_list"><a id='${id_personaje}'>${name}</a></li>`;
                 lista.insertAdjacentHTML("beforeend", txtHTML);
 
                 document.getElementById(`${id_personaje}`).addEventListener('click', personajeDescription);
@@ -144,11 +146,10 @@ const init = () => {
 }
 
 // Aún no va.....!!!
-// const removeItems_list = () => {
-//     items = document.getElementsByClassName('item_list');
-//     console.log(items);
-//     Array.from(items).forEach(element=> element.remove());
-// }
+const removeItems_list = () => {
+    items = document.getElementsByClassName('item_list');
+    Array.from(items).forEach(element => {element.remove()});
+}
 
 let section_h2;
 let section_p;
