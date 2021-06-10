@@ -37,7 +37,7 @@ const starwars = new Starwars();
 
 
 
-const loadFilmTitles = async ()=>{
+const loadFilmTitles =  ()=>{
     const datos = await fetchUrl(url);
     const lista = document.querySelector('.lista');
     
