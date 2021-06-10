@@ -9,6 +9,7 @@ const fetchFilms = async (urlFilms) => {
     let response = await fetch(urlFilms);
     if (response.ok) {
       let data = await response.json();
+      console.log(data);
       return data;
     }
   } catch (error) {
@@ -70,8 +71,9 @@ const fetchFilms = async (urlFilms) => {
 
 // const starwars = new Starwars();
 
-const loadFilmTitles = async () => {
-  const datos = await fetchFilms(urlFilms);
+const loadFilmTitles =  () => {
+  let datos =  fetchFilms(urlFilms);
+
   let lista = document.querySelector("lista");
 
   datos.forEach((e) => {
