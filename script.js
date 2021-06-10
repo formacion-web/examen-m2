@@ -3,9 +3,25 @@
  * Utilízalos si quieres.
  */
 
-class Starwars {
-    getFilms() {
+const url = 'https://www.swapi.tech/api/films';
 
+const fetchUrl = async (url) =>{
+    try {
+        let response = await fetch(url);
+        
+        if(response.ok){
+            let data = await response.json();
+            return data;
+        }
+    } catch (error) {
+        throw error;
+    }
+};
+
+class Starwars {
+    
+    getFilms() {
+        
     }
 
     getFilmById(id) {
@@ -19,8 +35,23 @@ class Starwars {
 
 const starwars = new Starwars();
 
-const loadFilmTitles = ()=>{
 
+
+const loadFilmTitles =  ()=>{
+    const datos = await fetchUrl(url);
+    const lista = document.querySelector('.lista');
+    
+    datos.forEach(e => {
+        let title = e.properties.title;
+        const li = document.createElement('li');
+        const a = document.createElement('a')
+        a.textContent = title;
+        li.setAttribute('id',id);
+        
+        li.appendChild(a);
+        
+        lista.appendChild(li);
+    });
 }
 
 const init = () => {
