@@ -13,24 +13,25 @@ let peli =
 });
 
 class Starwars {
-    getFilms(peli) {
-   
- let createEl = document.createElement('li');
- let get = document.getElementsByTagName('li');
-    
+    getFilms(title, sinopsis) {
+        this.title = title;
+        this.sinopsis = sinopsis;
+      let pelis = new Peliculas();
+
   
 }
     
     }
 
-    getFilmById(id) {
-    }
-    getCharacters() {
-    }
-    getCharactersById(id) {
-    }
+  //  getFilmById(id) {
+    //}
+  //  getCharacters() {
+    //}
+    //getCharactersById(id) {
 
-}
+    //}
+    
+
 
 const starwars = new Starwars();
 
