@@ -15,9 +15,13 @@ class Starwars {
     }
 
     getFilmById(id) {
+        let film;
         peliculas.forEach((e) => {
-            return  e[id];
+            if(e.uid == id){
+               film = e;
+            }
         });
+        return film;
 
     }
     getCharacters() {
@@ -51,7 +55,10 @@ const urlFetch = async() =>{
 
 const moviesById = (e)=>{
     let content = starwars.getFilmById(e.getAttribute("id"));
-    console.log(content);
+    let title = document.querySelector('#film-title');
+    let description = document.querySelector('#film-description');
+    title.innerHTML = content.properties.title;
+    description.innerHTML = content.properties.opening_crawl;
 }
 
 
